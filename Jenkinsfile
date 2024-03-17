@@ -19,6 +19,12 @@ pipeline {
             }
         }
         stage('Deployment') {
+            when {
+                expression {
+                    // Only run the Deployment stage if the Test stage was successful
+                    return currentBuild.result == 'SUCCESS'
+                }
+            }
             steps {
                 script {
                     // Enclose shell steps in curly braces
