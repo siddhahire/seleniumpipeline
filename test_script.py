@@ -2,7 +2,7 @@ from selenium import webdriver
 from selenium.webdriver.common.by import By
 import requests
 from urllib.parse import urljoin
-
+from selenium.webdriver.chrome.options import Options
 # URL of the web page
 url = "http://44.202.135.160/"  # Replace with your URL
 chrome_options = Options()
