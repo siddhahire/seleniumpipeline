@@ -5,7 +5,7 @@ from urllib.parse import urljoin
 from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.chrome.service import Service
 
-
+url = "http://44.202.135.160/"  
 options = webdriver.ChromeOptions()
 options.add_argument('--headless')
 options.add_argument('--no-sandbox')
