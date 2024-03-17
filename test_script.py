@@ -5,12 +5,12 @@ from urllib.parse import urljoin
 from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.chrome.service import Service
 
-service = Service(executable_path=r'/usr/bin/chromedriver')
+
 options = webdriver.ChromeOptions()
 options.add_argument('--headless')
 options.add_argument('--no-sandbox')
 options.add_argument('--disable-dev-shm-usage')
-driver = webdriver.Chrome(service=service, options=options)
+driver = webdriver.Chrome(options=options)
 
 # Open the web page
 driver.get(url)
