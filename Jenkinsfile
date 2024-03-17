@@ -22,8 +22,8 @@ pipeline {
             steps {
                 script {
                     // Enclose shell steps in curly braces
-                    sh 'cp /var/lib/jenkins/workspace/newP/*.html /var/www/html/'
-                    sh 'systemctl restart nginx'
+                    sh 'sudo -S cp /var/lib/jenkins/workspace/newP/*.html /var/www/html/'
+                    sh 'sudo -S systemctl restart nginx'
                 }
             }
         }
