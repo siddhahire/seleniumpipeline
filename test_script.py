@@ -5,9 +5,12 @@ from urllib.parse import urljoin
 
 # URL of the web page
 url = "http://44.202.135.160/"  # Replace with your URL
-
+chrome_options = Options()
+chrome_options.add_argument('--headless')
+chrome_options.add_argument('--no-sandbox')
+chrome_options.add_argument('--disable-dev-shm-usage')
 # Instantiate WebDriver (Chrome)
-driver = webdriver.Chrome()
+driver = webdriver.Chrome('/usr/bin/chromedriver',chrome_options=chrome_options)
 
 # Open the web page
 driver.get(url)
