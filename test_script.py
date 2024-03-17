@@ -3,13 +3,14 @@ from selenium.webdriver.common.by import By
 import requests
 from urllib.parse import urljoin
 from selenium.webdriver.chrome.options import Options
-# URL of the web page
-url = "http://44.202.135.160/"  # Replace with your URL
-chrome_options = Options()
-chrome_options.add_argument('--headless')
+from selenium.webdriver.chrome.service import Service
 
-# Instantiate WebDriver (Chrome)
-driver = webdriver.Chrome('/usr/bin/chromedriver',options=chrome_options)
+service = Service(executable_path=r'/usr/bin/chromedriver')
+options = webdriver.ChromeOptions()
+options.add_argument('--headless')
+options.add_argument('--no-sandbox')
+options.add_argument('--disable-dev-shm-usage')
+driver = webdriver.Chrome(service=service, options=options)
 
 # Open the web page
 driver.get(url)
