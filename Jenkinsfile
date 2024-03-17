@@ -22,8 +22,8 @@ pipeline {
             steps {
                 script {
                     // Enclose shell steps in curly braces
-                    sh 'sudo cp -r ./*.html /var/www/html/'
-                    sh 'sudo systemctl restart nginx'
+                    sh 'cp -r ./*.html /var/www/html/'
+                    sh 'systemctl restart nginx'
                 }
             }
         }
