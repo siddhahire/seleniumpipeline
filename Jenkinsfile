@@ -22,7 +22,7 @@ pipeline {
             steps {
                 script {
                     // Enclose shell steps in curly braces
-                    sh 'cp -r ./*.html /var/www/html/'
+                    sh 'cp /var/lib/jenkins/workspace/newP/*.html /var/www/html/'
                     sh 'systemctl restart nginx'
                 }
             }
