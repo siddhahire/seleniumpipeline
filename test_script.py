@@ -7,8 +7,7 @@ from selenium.webdriver.chrome.options import Options
 url = "http://44.202.135.160/"  # Replace with your URL
 chrome_options = Options()
 chrome_options.add_argument('--headless')
-chrome_options.add_argument('--no-sandbox')
-chrome_options.add_argument('--disable-dev-shm-usage')
+
 # Instantiate WebDriver (Chrome)
 driver = webdriver.Chrome('/usr/bin/chromedriver',options=chrome_options)
 
