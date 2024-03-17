@@ -4,7 +4,7 @@ import requests
 from urllib.parse import urljoin
 
 # URL of the web page
-url = "https://www.example.com"  # Replace with your URL
+url = "http://44.202.135.160/index.html"  # Replace with your URL
 
 # Instantiate WebDriver (Chrome)
 driver = webdriver.Chrome()
