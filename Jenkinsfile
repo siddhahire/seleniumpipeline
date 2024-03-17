@@ -12,7 +12,7 @@ pipeline {
             steps {
                 script {
                     // Run Python Selenium script
-                    def output = sh(script: 'python test_script.py', returnStdout: true).trim()
+                    def output = sh(script: 'python3 test_script.py', returnStdout: true).trim()
 
                     // Check the output to determine the test condition
                     if (output.contains('All tests passed')) {
