@@ -20,11 +20,13 @@ pipeline {
         }
         stage('Deployment') {
             steps {
-                sh -S 'sudo cp -r ./*.html /var/www/html/'
-                sh -S 'sudo systemctl restart nginx'
+                script {
+                    // Enclose shell steps in curly braces
+                    sh 'sudo cp -r ./*.html /var/www/html/'
+                    sh 'sudo systemctl restart nginx'
+                }
             }
         }
     }
-    
-   
 }
+
