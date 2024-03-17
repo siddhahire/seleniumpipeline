@@ -10,7 +10,7 @@ pipeline {
                     def output = sh(script: 'python3 test_script.py', returnStdout: true).trim()
                     println "Output of test_script.py: ${output}"
                     // Check the output to determine the test condition
-                    if (output.contains('passed')) {
+                    if (output.contains('Passed')) {
                         currentBuild.result = 'SUCCESS'
                     } else {
                         currentBuild.result = 'FAILURE'
